@@ -1,0 +1,37 @@
+{
+  "name": "minimal-libp2p",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "npx cross-env NODE_ENV=development npx webpack --",
+    "dev:prod": "npx cross-env NODE_ENV=production FORCE_SERVE=true npx webpack --",
+    "watch": "npm run dev -- --watch",
+    "watch:prod": "npm run dev:prod -- --watch",
+    "build": "npx cross-env NODE_ENV=production npx webpack --",
+    "clean": "rm -rf ./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ipld/dag-pb": "^1.1.2",
+    "array-shuffle": "^2.0.0",
+    "cids": "^1.1.6",
+    "hashlru": "^2.3.0",
+    "interface-datastore": "^4.0.1",
+    "ipfs-bitswap": "^5.0.4",
+    "ipfs-block-service": "^0.19.0",
+    "ipfs-repo": "^9.1.6",
+    "ipld": "^0.30.0",
+    "libp2p": "^0.31.3",
+    "libp2p-bootstrap": "^0.12.3",
+    "libp2p-mplex": "^0.10.3",
+    "libp2p-noise": "^3.0.0",
+    "libp2p-secio": "^0.13.1",
+    "libp2p-websockets": "^0.15.7",
+    "multiaddr-to-uri": "^7.0.0",
+    "multiformats": "^8.0.4",
+    "native-abort-controller": "^1.0.3",
+    "p-queue": "^7.1.0"
+  }
+}
