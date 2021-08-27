@@ -40,6 +40,10 @@ export async function createPeer() {
           ],
         },
       },
+      transport: {
+        //Probably want a hybrid where some are wss and some can be ip4/ws (like localhost)
+        [WS.prototype[Symbol.toStringTag]]: { filter: websocketMaFilters.all },
+      },
     },
   });
 
