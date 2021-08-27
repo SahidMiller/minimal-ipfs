@@ -1,7 +1,8 @@
 {
-  "name": "minimal-libp2p",
+  "name": "minimal-ipfs",
   "version": "0.0.1",
   "description": "",
+  "type": "module",
   "main": "src/index.js",
   "scripts": {
     "dev": "npx cross-env NODE_ENV=development npx webpack --",
