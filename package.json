@@ -30,6 +30,7 @@
     "libp2p-noise": "^3.0.0",
     "libp2p-secio": "^0.13.1",
     "libp2p-websockets": "^0.15.7",
+    "merge-options": "^3.0.4",
     "multiaddr-to-uri": "^7.0.0",
     "multiformats": "^8.0.4",
     "native-abort-controller": "^1.0.3",

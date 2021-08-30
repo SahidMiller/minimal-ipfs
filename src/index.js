@@ -18,6 +18,8 @@ import Ipld from "ipld";
 const DAG_PB = 112;
 const repo = new Repo("ipfs");
 import mergeOptions from "merge-options";
+import { Multiaddr } from "multiaddr";
+import { dnsaddrResolver } from "multiaddr/src/resolvers/index.js";
 
 export async function createPeer(options) {
   // Bring your own libp2p host....
@@ -80,9 +82,6 @@ export async function createPeer(options) {
 
   const originalDial = host.dial.bind(host);
   const originalDialProtocol = host.dialProtocol.bind(host);
-
-  const { Multiaddr } = require("multiaddr");
-  const { dnsaddrResolver } = require("multiaddr/src/resolvers");
 
   //TODO God willing: try to use dnsaddr cache first? Possibly randomize per call, God willing?
   host.addresses._resolved = {};
